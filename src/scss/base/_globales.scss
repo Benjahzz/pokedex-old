@@ -1,0 +1,27 @@
+@import './variables';
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fuentePrincipal;
+}
+html{
+    /* 10px */
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+.container {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+}
+.d-n{
+    width: 0rem !important;
+    
+}

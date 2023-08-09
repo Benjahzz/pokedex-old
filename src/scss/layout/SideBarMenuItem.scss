@@ -1,0 +1,94 @@
+@import '../base/mixins';
+@import '../base/variables';
+.sideBarMenu__content{
+    display: grid;
+    flex: 1;
+    place-items: center;
+    grid-template-columns: repeat(2, minmax(10rem, 1fr));
+    grid-template-rows: repeat( auto-fit, minmax(5rem, 1fr));
+    
+    &::-webkit-scrollbar{
+        width: .5rem;
+        height: auto;
+    }
+    
+    &::-webkit-scrollbar-thumb{
+        background-color: $colorHP;
+        border-radius: .1rem;
+        
+    }
+    &.collapsed{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden auto;
+    -ms-overflow-style: none;
+        gap: 1.8rem;
+        .sideBarMenu__item{
+            flex-direction: row;
+            position: relative;
+            
+            &:nth-child(1){
+                margin-top: 2rem;
+            }
+            
+            .sideBarMenu__item__icon{
+                width: 5rem;
+                
+                
+                
+            }
+            .sideBarMenu__item__label{
+               display: none;
+            }
+            &:hover{
+                .tooltip{
+                    display: inline-block;
+                    
+                }
+            }
+            .tooltip{
+                position: absolute;
+                background-color: $colorPrincipal;
+                color: white;
+                font-size: 1.3rem;
+                left: 70px;
+                padding: 10px;
+                border-radius: 4px;
+                text-transform: capitalize;
+                display: none;
+            }
+            
+        }
+    }
+    
+}
+.sideBarMenu__item{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    
+
+    transition: transform .2s ease-in-out;
+    
+    &:hover {
+        transform: scale(1.2);
+        
+        
+    }
+    .sideBarMenu__item__icon{
+        cursor: pointer;
+        width: 4rem;
+    }
+    .sideBarMenu__item__label{
+        cursor: pointer;
+        color: white;
+        letter-spacing: .1rem;
+    }
+    .itemContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

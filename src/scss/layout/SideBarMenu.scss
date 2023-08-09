@@ -1,0 +1,49 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.sideBarMenu{
+    position: sticky;
+    left: 0;
+    top: 0;
+    background-color: $colorPrincipal;
+    width: 30rem;
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include animacionTransition(width,.2s);
+    .sideBarMenu__header{
+        background-color: $colorPrincipal;
+        padding: 1rem;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .sideBarMenu__Logo{
+            width: 70%;
+            @include animacionTransition(width, .3s);
+            img{
+                width: 100%;
+            }
+        }
+        .sideBarMenu__hamburguer__button{
+            font-size: 2.8rem;
+            cursor: pointer;
+        }
+    }
+    &.collapsed{
+        width: 10rem;
+        height: auto;
+        min-height: 100vh;
+        padding: 1rem 0;
+        .sideBarMenu__header{
+            justify-content: center;
+        }
+
+    }
+}
+

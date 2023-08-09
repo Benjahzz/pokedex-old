@@ -1,0 +1,77 @@
+.cardPokemonItem{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 30rem;
+    height: 25rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+    .cardPokemonItem__header__image{
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        
+        transform: translate(-50%, -50%);
+        width: 17rem;
+
+        img{
+            width: 100%;
+        }
+    }
+    .cardPokemonItem__header{
+        width: 100%;
+        text-align: start;
+    }
+    .cardPokemonItem__body{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        margin: 2rem 0;
+        align-items: center;
+
+        &__name{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #808080;
+            margin-top: 1.6rem;
+
+        }
+        &__type__container{
+            
+            display: flex;
+            gap: 1rem;
+            img{
+                width: 4rem;
+            }
+        }
+    }
+    &__footer{
+        display: flex;
+        gap: 10rem;
+
+        &__weight, &__height{
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #808080;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+            span{
+                font-size: 1.6rem;
+            }
+        }
+
+    }
+
+    
+}

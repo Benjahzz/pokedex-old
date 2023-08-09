@@ -1,0 +1,31 @@
+.App{
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+    
+}
+.rightContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    
+}
+.container-cards{
+    margin: 4rem auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+    column-gap: 4rem;
+    place-items: center;
+    place-content: center;
+    img{
+        width: 5rem;
+    }
+}
+
+.loading-iconPokemon{
+    width: auto !important;
+}
